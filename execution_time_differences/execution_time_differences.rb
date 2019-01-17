@@ -27,8 +27,8 @@ end
 
 #contiguous sum
 #phase 1
-# time complexity : O(n^2)
-# space complexity: O(n^2)
+# time complexity : O(n^3)
+# space complexity: O(n^3)
 
 list1 = [2, 3, -6, 7, -6, 7]
 
@@ -44,7 +44,7 @@ end
 
 # phase 2
 # time complexity: O(n)
-# space complexity: O(n)
+# space complexity: O(1)
 
 def largest_contiguous_subsum_two(array)
   sum = nil
