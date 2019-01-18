@@ -50,7 +50,7 @@ arr = [0, 1, 5, 7]
 
 # Hash Map
 # time complexity O(n)
-# space complexity O(1)
+# space complexity O(n)
 def two_sum?(arr, target)
   s1 = Set.new 
   arr.each_with_index do |el, idx|
