@@ -1,9 +1,9 @@
+require 'set'
 # Two Sum
 
 # Brute Force
 # time complextiy: O(n^2)
 # space complextiy: O(n^2)
-
 def bad_two_sum?(arr, target)
   sums = []
   arr.each_index do |i|
@@ -15,6 +15,8 @@ def bad_two_sum?(arr, target)
 end
 
 # Sorting
+#time complexity O(n log n)
+#space complexity O(n)
 
 def okay_two_sum?(arr, target)
   sorted = arr.sort 
@@ -45,6 +47,19 @@ def my_bs(array, target)
 end
 
 arr = [0, 1, 5, 7]
-p okay_two_sum?(arr, 6) # => should be true
-p okay_two_sum?(arr, 10) # => should be false
+
+# Hash Map
+# time complexity O(n)
+# space complexity O(1)
+def two_sum?(arr, target)
+  s1 = Set.new 
+  arr.each_with_index do |el, idx|
+    return true if s1.include?(target-el)
+    s1.add(el)
+  end
+  false
+end
+
+p two_sum?(arr, 6) # => should be true
+p two_sum?(arr, 10) # => should be false
 
